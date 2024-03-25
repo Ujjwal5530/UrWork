@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFCFC"
+    tools:context=".Activites.SplashScreen">
+
+    <fragment
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph" />
+
+    <ImageView
+        android:id="@+id/carpenter"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/db37aus4afeik8nka3nuaqhd71" />
+
+    <ImageView
+        android:id="@+id/paint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/paint" />
+
+    <ImageView
+        android:id="@+id/mop"
+        android:layout_width="208dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="84dp"
+        app:layout_constraintEnd_toStartOf="@+id/carpenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mop" />
+
+    <ImageView
+        android:id="@+id/wrench"
+        android:layout_width="128dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/paint"
+        app:srcCompat="@drawable/wrench" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

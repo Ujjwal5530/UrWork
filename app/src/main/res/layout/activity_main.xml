@@ -35,6 +35,7 @@
         android:textColor="@color/white"
         android:textSize="21sp"
         android:textStyle="bold"
+        app:fontFamily="@font/lexend_deca"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

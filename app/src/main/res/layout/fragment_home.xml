@@ -82,127 +82,83 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+
+    <TextView
+        android:id="@+id/personal_services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/services"
+        android:padding="6dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:text="Personal Services"
+        android:textColor="@color/purple_200"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/lexend_deca"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/find_bar">
+        app:layout_constraintTop_toBottomOf="@+id/find_bar" />
 
-        <TextView
-            android:id="@+id/personal_services"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/services"
-            android:padding="6dp"
-            android:paddingStart="18dp"
-            android:paddingEnd="18dp"
-            android:text="Personal Services"
-            android:textColor="@color/purple_200"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:fontFamily="@font/lexend_deca"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/home_services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/services"
+        android:padding="6dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:text="Home Services"
+        android:textColor="@color/purple_200"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/lexend_deca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
-        <TextView
-            android:id="@+id/home_services"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/services"
-            android:padding="6dp"
-            android:paddingStart="18dp"
-            android:paddingEnd="18dp"
-            android:text="Home Services"
-            android:textColor="@color/purple_200"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:fontFamily="@font/lexend_deca"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView">
+        app:layout_constraintTop_toBottomOf="@+id/personal_services" />
 
+    <TextView
+        android:id="@+id/packages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/services"
+        android:padding="6dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:text="Packages"
+        android:textColor="@color/purple_200"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/lexend_deca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
 
-
-        <TextView
-            android:id="@+id/offers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/services"
-            android:padding="6dp"
-            android:paddingStart="18dp"
-            android:paddingEnd="18dp"
-            android:text="Offers &amp; Discounts"
-            android:textColor="@color/purple_200"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:fontFamily="@font/lexend_deca"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/packages"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/services"
-            android:padding="6dp"
-            android:paddingStart="18dp"
-            android:paddingEnd="18dp"
-            android:text="Packages"
-            android:textColor="@color/purple_200"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:fontFamily="@font/lexend_deca"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/home_services" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,25 +19,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph_main" />
 
-    <TextView
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:layout_weight="1"
-        android:background="@drawable/register_button"
-        android:elevation="10dp"
-        android:paddingLeft="65sp"
-        android:paddingTop="8sp"
-        android:paddingRight="65sp"
-        android:paddingBottom="8sp"
-        android:text="Checkout"
-        android:textColor="@color/white"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/lexend_deca"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/main_bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <TextView-->
+<!--        android:id="@+id/login"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="32dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:background="@drawable/register_button"-->
+<!--        android:elevation="10dp"-->
+<!--        android:paddingLeft="65sp"-->
+<!--        android:paddingTop="8sp"-->
+<!--        android:paddingRight="65sp"-->
+<!--        android:paddingBottom="8sp"-->
+<!--        android:text="Checkout"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="21sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:fontFamily="@font/lexend_deca"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

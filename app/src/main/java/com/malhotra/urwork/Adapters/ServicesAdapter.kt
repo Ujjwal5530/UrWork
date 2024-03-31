@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.malhotra.urwork.ModelClass.services_data
+import com.malhotra.urwork.ModelClass.ServicesData
 import com.malhotra.urwork.R
 import com.malhotra.urwork.databinding.ServicesCardBinding
 
-class ServicesAdapter(private val context: Context, private var servicesList : ArrayList<services_data>)
+class ServicesAdapter(private val context: Context, private var servicesList : ArrayList<ServicesData>)
     : RecyclerView.Adapter<ServicesAdapter.ServicesViewHolder>(){
 
 

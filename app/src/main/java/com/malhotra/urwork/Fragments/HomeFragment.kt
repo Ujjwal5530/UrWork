@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.malhotra.urwork.Activites.MainActivity
 import com.malhotra.urwork.Adapters.ServicesAdapter
 import com.malhotra.urwork.ModelClass.ServicesData
 import com.malhotra.urwork.R
@@ -31,6 +32,8 @@ class HomeFragment : Fragment() {
         binding.profile.setOnClickListener {
             Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToAccountFragment())
         }
+
+        (activity as MainActivity).supportActionBar?.hide()
         return binding.root
     }
 

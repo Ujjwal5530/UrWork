@@ -4,28 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background = "@drawable/account_page"
     tools:context=".Fragments.AccountFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="64dp"
-        android:background="@drawable/account_page"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Account"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/lexend_deca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/acc_profile"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:src="@drawable/ic_baseline_account_circle_24" />
+    <TextView
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Edit"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/lexend_deca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_west_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/acc_profile"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/acc_name"
@@ -35,13 +63,13 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="120dp"
         android:text="Ujjwal Malhotra "
-        android:textColor="@color/purple_500"
+        android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold|italic"
         app:fontFamily="@font/lexend_deca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/acc_profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

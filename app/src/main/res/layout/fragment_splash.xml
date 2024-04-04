@@ -26,7 +26,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="28dp"
@@ -42,16 +42,17 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:background="@drawable/login_button"
-            android:paddingLeft="62sp"
+            android:paddingLeft="55sp"
             android:paddingTop="8sp"
             android:elevation="2dp"
             app:fontFamily="@font/lexend_deca"
-            android:paddingRight="65sp"
+            android:paddingRight="55sp"
             android:paddingBottom="8sp"
             android:text="Login"
             android:textColor="@color/purple_500"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <TextView
@@ -60,16 +61,17 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:background="@drawable/register_button"
             android:elevation="2dp"
-            android:paddingLeft="62sp"
+            android:paddingLeft="55sp"
             android:paddingTop="8sp"
-            android:paddingRight="65sp"
+            android:paddingRight="55sp"
             android:paddingBottom="8sp"
             app:fontFamily="@font/lexend_deca"
             android:text="Register"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
     </LinearLayout>

@@ -29,6 +29,9 @@ class HomeFragment : Fragment() {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
         binding.recyclerView.adapter = ServicesAdapter(requireContext(), servicesList())
 
+        binding.recyclerView2.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
+        binding.recyclerView2.adapter = ServicesAdapter(requireContext(), homeServicesList())
+
         binding.profile.setOnClickListener {
             Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToAccountFragment())
         }
@@ -40,10 +43,26 @@ class HomeFragment : Fragment() {
     fun servicesList() : ArrayList<ServicesData> {
         val servicesList = arrayListOf<ServicesData>()
 
-        servicesList.add(ServicesData(1, R.drawable.ic_baseline_person_24, "Electricity"))
-        servicesList.add(ServicesData(2, R.drawable.ic_baseline_person_24, "Electricity 2"))
+        servicesList.add(ServicesData(1, R.drawable.salon, "Hair Salon"))
+        servicesList.add(ServicesData(2, R.drawable.spa, "Spa"))
+        servicesList.add(ServicesData(3, R.drawable.nail, "Nails"))
+        servicesList.add(ServicesData(4, R.drawable.massage, "Massage"))
+        servicesList.add(ServicesData(5, R.drawable.makeup_artist, "Make-up Artist"))
 
         return servicesList
+    }
+
+    fun homeServicesList() : ArrayList<ServicesData>{
+        val servicesList = arrayListOf<ServicesData>()
+
+        servicesList.add(ServicesData(1, R.drawable.cleaning, "Cleaning"))
+        servicesList.add(ServicesData(2, R.drawable.plumbing, "Plumbing"))
+        servicesList.add(ServicesData(3, R.drawable.electrical, "Electrical"))
+        servicesList.add(ServicesData(4, R.drawable.home_design, "Home Design"))
+        servicesList.add(ServicesData(5, R.drawable.yardwork, "Yard Work"))
+
+        return servicesList
+
     }
 
     override fun onDestroyView() {

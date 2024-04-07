@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/drawable/account_page.xml" value="0.1885" />
+        <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/drawable/account_textviews.xml" value="0.1885" />
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/drawable/edittext.xml" value="0.1885" />
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/drawable/find_bar.xml" value="0.1885" />
+        <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1885" />
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/drawable/login_button.xml" value="0.1885" />
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/drawable/main_bottom_bar.xml" value="0.1885" />
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/drawable/register_button.xml" value="0.139" />
@@ -15,7 +17,7 @@
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/drawable/welcome_banner.xml" value="0.139" />
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/layout/activity_main.xml" value="0.30648148148148147" />
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/layout/activity_splash_screen.xml" value="0.30648148148148147" />
-        <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/layout/fragment_account.xml" value="0.30648148148148147" />
+        <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/layout/fragment_account.xml" value="0.24351851851851852" />
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/layout/fragment_home.xml" value="0.30648148148148147" />
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/layout/fragment_login.xml" value="0.30648148148148147" />
         <entry key="..\:/Users/ujjwa/AndroidStudioProjects/UrWork/app/src/main/res/layout/fragment_register.xml" value="0.3625" />

@@ -74,6 +74,8 @@
         android:paddingStart="20dp"
         android:textColorHint="@color/purple_500"
         android:textSize="15sp"
+        android:drawableStart = "@drawable/ic_baseline_search_24"
+        android:drawablePadding = "5dp"
         android:textColor="@color/purple_500"
         android:textStyle="bold|italic"
         app:fontFamily="@font/lexend_deca"

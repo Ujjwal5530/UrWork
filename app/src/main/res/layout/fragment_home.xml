@@ -68,15 +68,15 @@
         android:layout_marginTop="108dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/find_bar"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:drawablePadding="5dp"
         android:elevation="10dp"
         android:hint="Find Services..."
         android:padding="10dp"
         android:paddingStart="20dp"
+        android:textColor="@color/purple_500"
         android:textColorHint="@color/purple_500"
         android:textSize="15sp"
-        android:drawableStart = "@drawable/ic_baseline_search_24"
-        android:drawablePadding = "5dp"
-        android:textColor="@color/purple_500"
         android:textStyle="bold|italic"
         app:fontFamily="@font/lexend_deca"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,12 +105,12 @@
                     android:id="@+id/personal_services"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
                     android:background="@drawable/services"
                     android:padding="6dp"
                     android:paddingStart="18dp"
                     android:paddingEnd="18dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="24dp"
                     android:text="Personal Services"
                     android:textColor="@color/purple_200"
                     android:textSize="15sp"
@@ -139,13 +139,13 @@
                     android:id="@+id/home_services"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
                     android:background="@drawable/services"
                     android:padding="6dp"
                     android:paddingStart="18dp"
                     android:paddingEnd="18dp"
                     android:text="Home Services"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
                     android:textColor="@color/purple_200"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -172,12 +172,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
                     android:background="@drawable/services"
                     android:padding="6dp"
                     android:paddingStart="18dp"
                     android:paddingEnd="18dp"
                     android:text="Packages"
-                    android:layout_marginTop="8dp"
                     android:textColor="@color/purple_200"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -190,12 +190,26 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="83dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/packages" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/main_bottom_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

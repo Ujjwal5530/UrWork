@@ -24,7 +24,6 @@ class SplashFragment : Fragment() {
         // Inflate the layout for this fragment
        _binding = FragmentSplashBinding.inflate(inflater, container, false)
 
-
         Handler(Looper.getMainLooper()).postDelayed({
             binding.linearLayout.apply {
                 visibility = View.VISIBLE
@@ -52,8 +51,6 @@ class SplashFragment : Fragment() {
 
         return binding.root
     }
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

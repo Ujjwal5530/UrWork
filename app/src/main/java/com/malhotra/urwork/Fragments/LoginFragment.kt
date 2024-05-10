@@ -2,6 +2,8 @@ package com.malhotra.urwork.Fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -33,7 +35,11 @@ class LoginFragment : Fragment() {
             if (email.isNotEmpty() && password.isNotEmpty()){
                 firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
                     if (it.isSuccessful){
-                        startActivity(Intent(requireContext(), MainActivity::class.java))
+                        binding.loggingIn.visibility = View.VISIBLE
+                        Handler(Looper.getMainLooper()).postDelayed({
+                            startActivity(Intent(requireContext(), MainActivity::class.java))
+                            activity?.finish()
+                        },500)
                     }else Toast.makeText(requireContext(), it.exception?.message.toString(), Toast.LENGTH_SHORT).show()
                 }
             }else Toast.makeText(requireContext(), "All Fields Required!!", Toast.LENGTH_SHORT).show()

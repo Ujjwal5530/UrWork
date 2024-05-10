@@ -16,6 +16,7 @@ class SplashFragment : Fragment() {
 
     private var _binding : FragmentSplashBinding? = null
     private val binding get() = _binding!!
+    private var i = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,6 +25,7 @@ class SplashFragment : Fragment() {
         // Inflate the layout for this fragment
        _binding = FragmentSplashBinding.inflate(inflater, container, false)
 
+        if (i == 0){
         Handler(Looper.getMainLooper()).postDelayed({
             binding.linearLayout.apply {
                 visibility = View.VISIBLE
@@ -37,7 +39,23 @@ class SplashFragment : Fragment() {
                 visibility = View.VISIBLE
                 startAnimation(AnimationUtils.loadAnimation(activity, R.anim.fade_in))
             }
+            i++
         }, 800)
+
+        } else {
+            binding.linearLayout.apply {
+                visibility = View.VISIBLE
+                startAnimation(AnimationUtils.loadAnimation(activity, R.anim.fade_in))
+            }
+            binding.signup.apply {
+                visibility = View.VISIBLE
+                startAnimation(AnimationUtils.loadAnimation(activity, R.anim.fade_in))
+            }
+            binding.view.apply {
+                visibility = View.VISIBLE
+                startAnimation(AnimationUtils.loadAnimation(activity, R.anim.fade_in))
+            }
+        }
 
         binding.login.setOnClickListener {
                 Navigation.findNavController(it)

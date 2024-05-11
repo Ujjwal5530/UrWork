@@ -1,6 +1,10 @@
 package com.malhotra.urwork.Fragments
 
+import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Context.INPUT_METHOD_SERVICE
 import android.content.Intent
+import android.inputmethodservice.InputMethodService
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,7 +12,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.core.content.getSystemService
 import com.google.firebase.auth.FirebaseAuth
 import com.malhotra.urwork.Activites.MainActivity
 import com.malhotra.urwork.R
@@ -21,6 +27,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var firebaseAuth: FirebaseAuth
 
+    @SuppressLint("ServiceCast")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,6 +36,10 @@ class LoginFragment : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.login.setOnClickListener {
+            val imm = activity?.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            val emailView = binding.email
+            imm.hideSoftInputFromWindow(emailView.windowToken,0)
+
             val email = binding.email.text.toString()
             val password = binding.password.text.toString()
 
@@ -39,7 +50,7 @@ class LoginFragment : Fragment() {
                         Handler(Looper.getMainLooper()).postDelayed({
                             startActivity(Intent(requireContext(), MainActivity::class.java))
                             activity?.finish()
-                        },500)
+                        },600)
                     }else Toast.makeText(requireContext(), it.exception?.message.toString(), Toast.LENGTH_SHORT).show()
                 }
             }else Toast.makeText(requireContext(), "All Fields Required!!", Toast.LENGTH_SHORT).show()

@@ -19,7 +19,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.malhotra.urwork.Activites.MainActivity
 import com.malhotra.urwork.R
 import com.malhotra.urwork.databinding.FragmentLoginBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
 
     private var _binding : FragmentLoginBinding? = null

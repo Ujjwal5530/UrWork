@@ -1,10 +1,12 @@
 package com.malhotra.urwork.Fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,12 +14,17 @@ import com.malhotra.urwork.Activites.MainActivity
 import com.malhotra.urwork.Adapters.ServicesAdapter
 import com.malhotra.urwork.ModelClass.ServicesData
 import com.malhotra.urwork.R
+import com.malhotra.urwork.ViewModel.PersonalViewModel
 import com.malhotra.urwork.databinding.FragmentHomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    val personalViewModel : PersonalViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,12 +36,19 @@ class HomeFragment : Fragment() {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
         binding.recyclerView.adapter = ServicesAdapter(requireContext(), servicesList())
 
+        personalViewModel.getPersonalServices()
+
+        personalViewModel.services.observe(viewLifecycleOwner) {
+            it.forEach{ Log.d("DataPersonal", it.toString()) }
+        }
         binding.recyclerView2.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
         binding.recyclerView2.adapter = ServicesAdapter(requireContext(), homeServicesList())
 
         binding.profile.setOnClickListener {
             Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToAccountFragment())
         }
+
+
 
         (activity as MainActivity).supportActionBar?.hide()
         return binding.root

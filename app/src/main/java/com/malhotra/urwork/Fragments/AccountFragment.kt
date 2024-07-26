@@ -22,7 +22,9 @@ import com.malhotra.urwork.Activites.SplashScreen
 import com.malhotra.urwork.R
 import com.malhotra.urwork.ViewModel.UserViewModel
 import com.malhotra.urwork.databinding.FragmentAccountBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AccountFragment : Fragment() {
 
     private var _binding : FragmentAccountBinding? = null

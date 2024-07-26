@@ -11,7 +11,9 @@ import android.view.animation.AnimationUtils
 import androidx.navigation.Navigation
 import com.malhotra.urwork.R
 import com.malhotra.urwork.databinding.FragmentSplashBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SplashFragment : Fragment() {
 
     private var _binding : FragmentSplashBinding? = null

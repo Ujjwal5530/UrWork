@@ -19,8 +19,9 @@ import com.malhotra.urwork.ModelClass.UserData
 import com.malhotra.urwork.R
 import com.malhotra.urwork.ViewModel.UserViewModel
 import com.malhotra.urwork.databinding.FragmentRegisterBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class RegisterFragment : Fragment() {
 
     private var _binding : FragmentRegisterBinding? = null

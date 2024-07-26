@@ -10,7 +10,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.malhotra.urwork.Fragments.SplashFragment
 import com.malhotra.urwork.R
 import com.malhotra.urwork.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding

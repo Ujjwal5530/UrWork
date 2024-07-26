@@ -1,3 +1,3 @@
 package com.malhotra.urwork.ModelClass
 
-data class ServicesData(val id : Int, val image : Int, val title : String?)
+data class ServicesData(val id : Int? = null, val image : String? = "", val title : String? = "")

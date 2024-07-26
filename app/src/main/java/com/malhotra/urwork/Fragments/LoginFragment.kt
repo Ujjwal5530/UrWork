@@ -1,10 +1,8 @@
 package com.malhotra.urwork.Fragments
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.content.Intent
-import android.inputmethodservice.InputMethodService
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -14,10 +12,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import androidx.core.content.getSystemService
+import androidx.fragment.app.viewModels
 import com.google.firebase.auth.FirebaseAuth
 import com.malhotra.urwork.Activites.MainActivity
-import com.malhotra.urwork.R
+import com.malhotra.urwork.ViewModel.UserViewModel
 import com.malhotra.urwork.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -26,6 +24,8 @@ class LoginFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var firebaseAuth: FirebaseAuth
+
+    private val userViewModel : UserViewModel by viewModels()
 
     @SuppressLint("ServiceCast")
     override fun onCreateView(
@@ -44,15 +44,8 @@ class LoginFragment : Fragment() {
             val password = binding.password.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty()){
-                firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
-                    if (it.isSuccessful){
-                        binding.loggingIn.visibility = View.VISIBLE
-                        Handler(Looper.getMainLooper()).postDelayed({
-                            startActivity(Intent(requireContext(), MainActivity::class.java))
-                            activity?.finish()
-                        },600)
-                    }else Toast.makeText(requireContext(), it.exception?.message.toString(), Toast.LENGTH_SHORT).show()
-                }
+                binding.loggingIn.visibility = View.VISIBLE
+                userViewModel.loginUser(email, password, requireContext(), activity)
             }else Toast.makeText(requireContext(), "All Fields Required!!", Toast.LENGTH_SHORT).show()
 
         }

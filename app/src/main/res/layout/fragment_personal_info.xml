@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".Fragments.AccountFragment">
+    tools:context=".Fragments.PersonalInfoFragment">
 
     <TextView
-        android:id="@+id/account"
+        android:id="@+id/personalInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Account"
+        android:text="Personal Information"
         android:textColor="@color/purple_500"
         android:textSize="17sp"
         android:textStyle="bold"
@@ -22,12 +21,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/sign_out"
+        android:id="@+id/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Sign Out"
+        android:text="Done"
         android:textColor="@color/purple_500"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -45,17 +44,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/background"
         android:layout_width="439dp"
         android:layout_height="665dp"
-        android:background="@drawable/account_page"
         android:layout_marginTop="180dp"
+        android:background="@drawable/account_page"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/account">
-
+        app:layout_constraintTop_toBottomOf="@+id/personalInfo">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -63,47 +61,46 @@
         android:id="@+id/acc_profile"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:elevation="10dp"
         android:layout_marginTop="56dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
         app:civ_border_width="5dp"
         app:civ_border_color="@color/purple_500"
-        android:src="@drawable/ic_baseline_account_circle_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/account" />
+        app:layout_constraintTop_toBottomOf="@id/personalInfo" />
 
     <TextView
-        android:id="@+id/acc_name"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text=""
+        android:text="Edit Image"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        android:textStyle="bold|italic"
-        app:fontFamily="@font/lexend_deca"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acc_profile" />
-
-    <TextView
-        android:id="@+id/acc_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:fontFamily="@font/lexend_deca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acc_name" />
+        app:layout_constraintTop_toBottomOf="@+id/acc_profile" />
 
     <TextView
-        android:id="@+id/personal_info"
+        android:id="@+id/addPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add Phone Number"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/lexend_deca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalName" />
+
+    <EditText
+        android:id="@+id/personalEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -111,86 +108,72 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/account_textviews"
         android:drawablePadding="9dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
         android:padding="10dp"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
-        android:text="Personal Information"
         android:textColor="@color/purple_500"
+        android:textColorHint="@color/purple_500"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:drawableStartCompat="@drawable/id_card"
+        app:drawableStartCompat="@drawable/baseline_attach_email_24"
         app:fontFamily="@font/lexend_deca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acc_email" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/acc_password"
+    <EditText
+        android:id="@+id/personalName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/account_textviews"
-        android:drawablePadding="8dp"
+        android:drawablePadding="9dp"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:padding="10dp"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
-        android:text="Password &amp; Security"
         android:textColor="@color/purple_500"
+        android:textColorHint="@color/purple_500"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:drawableStartCompat="@drawable/password"
+        app:drawableStartCompat="@drawable/user"
         app:fontFamily="@font/lexend_deca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_info" />
+        app:layout_constraintTop_toBottomOf="@+id/personalEmail" />
 
-    <TextView
-        android:id="@+id/previous_services"
+    <EditText
+        android:id="@+id/personalPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/account_textviews"
-        android:drawablePadding="8dp"
+        android:drawablePadding="9dp"
+        android:hint="Phone number"
+        android:inputType="number"
+        android:minHeight="48dp"
         android:padding="10dp"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
-        android:text="Previous Services"
         android:textColor="@color/purple_500"
+        android:textColorHint="@color/purple_500"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:drawableStartCompat="@drawable/previous_services"
-        app:fontFamily="@font/lexend_deca"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acc_password" />
-
-    <ImageView
-        android:id="@+id/contactUs"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/contact_us"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/previous_services" />
-
-    <TextView
-        android:id="@+id/contactUs_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Contact Us"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
+        android:visibility="visible"
+        app:drawableStartCompat="@drawable/baseline_call_24"
         app:fontFamily="@font/lexend_deca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contactUs" />
+        app:layout_constraintTop_toBottomOf="@+id/personalName" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

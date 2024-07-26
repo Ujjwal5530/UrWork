@@ -19,11 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        firebaseAuth = FirebaseAuth.getInstance()
-        if (firebaseAuth.currentUser == null){
-            startActivity(Intent(this, SplashScreen::class.java))
-            finish()
-        }
+
         setContentView(binding.root)
 
         navController = findNavController(R.id.fragmentContainerView)
@@ -35,5 +31,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp()||super.onSupportNavigateUp()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        firebaseAuth = FirebaseAuth.getInstance()
+        if (firebaseAuth.currentUser == null){
+            startActivity(Intent(this, SplashScreen::class.java))
+            finish()
+        }
     }
 }

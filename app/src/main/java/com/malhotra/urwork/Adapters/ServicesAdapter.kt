@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.malhotra.urwork.ModelClass.ServicesData
 import com.malhotra.urwork.R
 import com.malhotra.urwork.databinding.ServicesCardBinding
@@ -22,7 +23,8 @@ class ServicesAdapter(private val context: Context, private var servicesList : A
     override fun onBindViewHolder(holder: ServicesViewHolder, position: Int) {
         val servicesList = servicesList[position]
 
-        holder.binding.menuImage.setImageResource(servicesList.image)
+        Glide.with(context).load(servicesList.image).into(holder.binding.menuImage)
+
         holder.binding.menuTitle.text = servicesList.title
     }
 

@@ -25,5 +25,20 @@
             app:launchSingleTop="true"
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_accountFragment_to_personalInfoFragment"
+            app:destination="@id/personalInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalInfoFragment"
+        android:name="com.malhotra.urwork.Fragments.PersonalInfoFragment"
+        android:label="fragment_personal_info"
+        tools:layout="@layout/fragment_personal_info" >
+        <action
+            android:id="@+id/action_personalInfoFragment_to_accountFragment"
+            app:destination="@id/accountFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/accountFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

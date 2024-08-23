@@ -25,6 +25,10 @@ class UserViewModel(val firestore: FirebaseFirestore = FirebaseFirestore.getInst
     fun loginUser(email: String, password: String, context: Context, activity: FragmentActivity?){
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
             if (it.isSuccessful){
+                //setting user log = true
+                activity?.getSharedPreferences("userLogin", Context.MODE_PRIVATE)
+                    ?.edit()?.putBoolean("isLoggedIn", true)?.apply()
+
                 Handler(Looper.getMainLooper()).postDelayed({
                     startActivity(context, Intent(context, MainActivity::class.java), null)
                     activity?.finish()
@@ -36,6 +40,10 @@ class UserViewModel(val firestore: FirebaseFirestore = FirebaseFirestore.getInst
     fun registerUser(email: String, password: String, user : UserData, context: Context, activity: FragmentActivity? ){
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
             if (it.isSuccessful){
+                //setting user log = true
+                activity?.getSharedPreferences("userLogin", Context.MODE_PRIVATE)
+                    ?.edit()?.putBoolean("isLoggedIn", true)?.apply()
+
                 user.id = it.result.user?.uid.toString()
                 updateUser(user)
                 Handler(Looper.getMainLooper()).postDelayed({
@@ -58,7 +66,10 @@ class UserViewModel(val firestore: FirebaseFirestore = FirebaseFirestore.getInst
         }
     }
 
-    fun logout(){
+    fun logout(activity: FragmentActivity?){
+        //setting user log = false
+        activity?.getSharedPreferences("userLogin", Context.MODE_PRIVATE)
+            ?.edit()?.putBoolean("isLoggedIn", false)?.apply()
         auth.signOut()
     }
 

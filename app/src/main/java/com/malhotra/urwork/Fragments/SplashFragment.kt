@@ -69,6 +69,10 @@ class SplashFragment : Fragment() {
                 .navigate(SplashFragmentDirections.actionSplashFragmentToRegisterFragment())
         }
 
+        binding.signup.setOnClickListener {
+            Navigation.findNavController(it).navigate(SplashFragmentDirections.actionSplashFragmentToFirstScreen())
+        }
+
         return binding.root
     }
 

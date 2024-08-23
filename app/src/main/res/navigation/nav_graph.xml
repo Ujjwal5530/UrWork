@@ -18,6 +18,9 @@
             android:id="@+id/action_splashFragment_to_registerFragment"
             app:destination="@id/registerFragment"
             app:enterAnim="@anim/fade_in" />
+        <action
+            android:id="@+id/action_splashFragment_to_firstScreen"
+            app:destination="@id/firstScreen" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -28,4 +31,48 @@
         android:id="@+id/registerFragment"
         android:name="com.malhotra.urwork.Fragments.RegisterFragment"
         android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/urPartnerLogin"
+        android:name="com.malhotra.urwork.Fragments.UrPartnerLogin"
+        android:label="fragment_ur_partner_login"
+        tools:layout="@layout/fragment_ur_partner_login" />
+    <fragment
+        android:id="@+id/firstScreen"
+        android:name="com.malhotra.urwork.Fragments.urPartnerRegister.FirstScreen"
+        android:label="fragment_first_screen"
+        tools:layout="@layout/fragment_first_screen" >
+        <action
+            android:id="@+id/action_firstScreen_to_urPartnerLogin"
+            app:destination="@id/urPartnerLogin" />
+        <action
+            android:id="@+id/action_firstScreen_to_secondScreen"
+            app:destination="@id/secondScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondScreen"
+        android:name="com.malhotra.urwork.Fragments.urPartnerRegister.SecondScreen"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondScreen_to_thirdScreen"
+            app:destination="@id/thirdScreen" />
+        <argument
+            android:name="Name"
+            app:argType="string" />
+        <argument
+            android:name="Email"
+            app:argType="string" />
+        <argument
+            android:name="Phone"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdScreen"
+        android:name="com.malhotra.urwork.Fragments.urPartnerRegister.ThirdScreen"
+        android:label="fragment_third_screen"
+        tools:layout="@layout/fragment_third_screen" >
+        <argument
+            android:name="partnerData"
+            app:argType="com.malhotra.urwork.ModelClass.PartnerData" />
+    </fragment>
 </navigation>

@@ -78,7 +78,7 @@ class AccountFragment : Fragment() {
             dialog.show()
             dialog.findViewById<TextView>(R.id.confirm_button).setOnClickListener {
                 dialog.dismiss()
-                userViewModel.logout()
+                userViewModel.logout(activity)
                 startActivity(Intent(requireContext(), SplashScreen::class.java))
                 activity?.finish()
             }
